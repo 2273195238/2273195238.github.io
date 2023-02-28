@@ -1,22 +1,483 @@
 <!DOCTYPE html>
-<html lang="ch-ZN">
+<html lang="zh-CN">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>超哥NB</title>
-    <style>
-        h1 {
-            color: red;
-            font-size: 180px;
-            margin-left: 30%;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <!-- 方便移动端的展示 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 引入 Semantic UI 框架 -->
+  <link rel="stylesheet" href="./static/lib/Semantic-UI-CSS-master/Semantic-UI-CSS-master/semantic.min.css">
+  <!-- 引入自己写的样式表 -->
+  <link rel="stylesheet" href="./static/css/me.css">
+  <title>首页</title>
 </head>
 
 <body>
-    <h1>超哥NB</h1>
+  <!-- 导航 -->
+  <!-- 
+        ui：
+        segment：
+        inverted：反转颜色，默认是白色，反转后成黑色
+        attached：依附，去除默认有的圆角
+        以 m- 开头代表自己写的 css 样式，存放在 me.css 中
+        m-padded-tb-mini：padded-上下直接的间隔，tb-上下，mini-小的
+     -->
+  <nav class="ui inverted attached segment m-padded-tb-mini">
+    <!-- 
+            container：容器，根据屏幕大小得到一个比较好的响应效果
+         -->
+    <div class="ui container">
+      <!-- 
+                secondary：改变样式
+                menu：菜单
+            -->
+      <div class="ui inverted secondary menu">
+        <!-- 
+                    teal：青绿色，需要有 head
+                    header：
+                    item：菜单项
+                -->
+        <h2 class="ui teal header item">Blog</h2>
+        <!-- 引入图标 -->
+        <a href="#" class="item"><i class="home icon"></i>首页</a>
+        <a href="#" class="item"><i class="idea icon"></i>分类</a>
+        <a href="#" class="item"><i class="tags icon"></i>标签</a>
+        <a href="#" class="item"><i class="info icon"></i>关于我</a>
+        <!-- right：靠右 -->
+        <div class="right item">
+          <!-- input：搜索框样式 -->
+          <!-- transparent：透明 -->
+          <!-- 后期修改思路，原来透明，点击之后不再透明 -->
+          <div class="ui icon inverted transparent input">
+            <input type="text" placeholder="Search....">
+            <!-- link：可以点击 -->
+            <i class="search link icon"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- 中间内容 -->
+  <div class="m-container m-padded-tb-large">
+    <div class="ui container">
+      <div class="ui grid">
+        <!-- 文章内容 -->
+        <div class="eleven wide column">
+          <!-- header -->
+          <!-- 
+                        top：
+                        attached：将 2 个连接起来
+                     -->
+          <div class="ui top attached segment">
+            <!-- middle：垂直居中 -->
+            <div class="ui middle aligned two column grid">
+              <div class="column">
+                <h3 class="ui teal header">
+                  博客
+                </h3>
+              </div>
+              <div class="right aligned column">
+                共
+                <h2 class="ui orange header m-inline-block">14</h2> 篇
+              </div>
+            </div>
+          </div>
+          <!-- content -->
+          <div class="ui attached segment">
+            <!-- 单条博客 -->
+            <div class="ui padded vertical segment m-padded-tb-large">
+              <div class="ui grid">
+                <div class="ui eleven wide column">
+                  <h3 class="ui header">什么是 Semantic UI</h3>
+                  <p class="m-text m-text-thin">Semantic UI是一个用户友好度爆表的响应式前端框架，具备3000多个主题变量和50多个UI组件，可以快速搭建漂亮的网页。Semantic UI还集成了许多第三方资源库，包括React，Angular，Meteor，Ember等等，给开发人员带来了更多便捷。</p>
+                  <div class="ui grid">
+                    <div class="ui mini eleven wide column">
+                      <!-- horizontal： -->
+                      <div class="ui horizontal link list">
+                        <div class="item">
+                          <!-- avatar：圆形小图片，适用于头像 -->
+                          <!-- <img src="https://pic.netbian.com/uploads/allimg/210219/181224-161372954458d6.jpg" alt="" class="ui avatar image"> -->
+                          <!-- content：在图片后面加一些文字 -->
+                          <!-- calendar：日期图标 -->
+                          <i class="calendar icon"></i> 2021-11-30
+                        </div>
+                        <div class="item">
+                          <!-- eye：眼睛图标 -->
+                          <i class="eye icon"></i> 31
+                        </div>
+                      </div>
+                    </div>
+                    <div class="ui right aligned five wide column">
+                      <!-- 
+                                                label：
+                                                basic：
+                                             -->
+                      <a href="#" target="_blank" class="ui teal basic label m-padded-mini m-text-thin">前端框架</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="ui five wide column">
+                  <a href="#" target="_blank">
+                    <!-- 这里可以设置一个样式规范图片大小 -->
+                    <img src="./static/image/semantic_ui.png" alt="" class="ui rounded image">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- 单条博客 -->
+            <div class="ui padded vertical segment m-padded-tb-large">
+              <div class="ui grid">
+                <div class="ui eleven wide column">
+                  <h3 class="ui header">初识深度学习(Deep Learning)</h3>
+                  <p class="m-text m-text-thin">深度学习(DL, Deep Learning)是机器学习(ML, Machine Learning)领域中一个新的研究方向，它被引入机器学习使其更接近于最初的目标——人工智能(AI, Artificial Intelligence)。</p>
+                  <div class="ui grid">
+                    <div class="ui mini eleven wide column">
+                      <!-- horizontal： -->
+                      <div class="ui horizontal link list">
+                        <div class="item">
+                          <!-- avatar：圆形小图片，适用于头像 -->
+                          <!-- <img src="https://pic.netbian.com/uploads/allimg/210219/181224-161372954458d6.jpg" alt="" class="ui avatar image"> -->
+                          <!-- content：在图片后面加一些文字 -->
+                          <!-- calendar：日期图标 -->
+                          <i class="calendar icon"></i> 2021-11-28
+                        </div>
+                        <div class="item">
+                          <!-- eye：眼睛图标 -->
+                          <i class="eye icon"></i> 194
+                        </div>
+                      </div>
+                    </div>
+                    <div class="ui right aligned five wide column">
+                      <a href="#" target="_blank" class="ui teal basic label m-padded-mini m-text-thin">Deep Learning</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="ui five wide column">
+                  <a href="#" target="_blank">
+                    <!-- 这里可以设置一个样式规范图片大小 -->
+                    <img src="./static/image/dl.png" alt="" class="ui rounded image">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- 单条博客 -->
+            <div class="ui padded vertical segment m-padded-tb-large">
+              <div class="ui grid">
+                <div class="ui eleven wide column">
+                  <h3 class="ui header">jQuery 学习笔记（一）</h3>
+                  <p class="m-text m-text-thin">jQuery是一个快速、简洁的JavaScript框架，是继Prototype之后又一个优秀的JavaScript代码库（框架）于2006年1月由John Resig发布。jQuery设计的宗旨是“write Less, Do More”，即倡导写更少的代码，做更多的事情。</p>
+                  <div class="ui grid">
+                    <div class="ui mini eleven wide column">
+                      <!-- horizontal： -->
+                      <div class="ui horizontal link list">
+                        <div class="item">
+                          <!-- avatar：圆形小图片，适用于头像 -->
+                          <!-- <img src="https://pic.netbian.com/uploads/allimg/210219/181224-161372954458d6.jpg" alt="" class="ui avatar image"> -->
+                          <!-- content：在图片后面加一些文字 -->
+                          <!-- calendar：日期图标 -->
+                          <i class="calendar icon"></i> 2021-11-24
+                        </div>
+                        <div class="item">
+                          <!-- eye：眼睛图标 -->
+                          <i class="eye icon"></i> 683
+                        </div>
+                      </div>
+                    </div>
+                    <div class="ui right aligned five wide column">
+                      <a href="#" target="_blank" class="ui teal basic label m-padded-mini m-text-thin">前端框架</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="ui five wide column">
+                  <a href="#" target="_blank">
+                    <!-- 这里可以设置一个样式规范图片大小 -->
+                    <img src="./static/image/jQuery.png" alt="" class="ui rounded image">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- 单条博客 -->
+            <div class="ui padded vertical segment m-padded-tb-large">
+              <div class="ui grid">
+                <div class="ui eleven wide column">
+                  <h3 class="ui header">Spring AOP</h3>
+                  <p class="m-text m-text-thin">在软件业，AOP为Aspect Oriented Programming的缩写，意为：面向切面编程，通过预编译方式和运行期动态代理实现程序功能的统一维护的一种技术。AOP是OOP的延续，是软件开发中的一个热点，也是Spring框架中的一个重要内容，是函数式编程的一种衍生范型。</p>
+                  <div class="ui grid">
+                    <div class="ui mini eleven wide column">
+                      <!-- horizontal： -->
+                      <div class="ui horizontal link list">
+                        <div class="item">
+                          <!-- avatar：圆形小图片，适用于头像 -->
+                          <!-- <img src="https://pic.netbian.com/uploads/allimg/210219/181224-161372954458d6.jpg" alt="" class="ui avatar image"> -->
+                          <!-- content：在图片后面加一些文字 -->
+                          <!-- calendar：日期图标 -->
+                          <i class="calendar icon"></i> 2021-11-14
+                        </div>
+                        <div class="item">
+                          <!-- eye：眼睛图标 -->
+                          <i class="eye icon"></i> 5782
+                        </div>
+                      </div>
+                    </div>
+                    <div class="ui right aligned five wide column">
+                      <a href="#" target="_blank" class="ui teal basic label m-padded-mini m-text-thin">Java</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="ui five wide column">
+                  <a href="#" target="_blank">
+                    <!-- 这里可以设置一个样式规范图片大小 -->
+                    <img src="./static/image/spring.png" alt="" class="ui rounded image">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- 单条博客 -->
+            <div class="ui padded vertical segment m-padded-tb-large">
+              <div class="ui grid">
+                <div class="ui eleven wide column">
+                  <h3 class="ui header">CentOS</h3>
+                  <p class="m-text m-text-thin">CentOS是免费的、开源的、可以重新分发的开源操作系统，CentOS（Community Enterprise Operating System，中文意思是社区企业操作系统）是Linux发行版之一。</p>
+                  <div class="ui grid">
+                    <div class="ui mini eleven wide column">
+                      <!-- horizontal： -->
+                      <div class="ui horizontal link list">
+                        <div class="item">
+                          <!-- avatar：圆形小图片，适用于头像 -->
+                          <!-- <img src="https://pic.netbian.com/uploads/allimg/210219/181224-161372954458d6.jpg" alt="" class="ui avatar image"> -->
+                          <!-- content：在图片后面加一些文字 -->
+                          <!-- calendar：日期图标 -->
+                          <i class="calendar icon"></i> 2021-11-10
+                        </div>
+                        <div class="item">
+                          <!-- eye：眼睛图标 -->
+                          <i class="eye icon"></i> 3477
+                        </div>
+                      </div>
+                    </div>
+                    <div class="ui right aligned five wide column">
+                      <a href="#" target="_blank" class="ui teal basic label m-padded-mini m-text-thin">Linux</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="ui five wide column">
+                  <a href="#" target="_blank">
+                    <!-- 这里可以设置一个样式规范图片大小 -->
+                    <img src="./static/image/CentOS.png" alt="" class="ui rounded image">
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- footer -->
+          <!-- bottom： -->
+          <div class="ui bottom attached segment">
+            <div class="ui middle aligned two column grid">
+              <div class="column">
+                <!-- basic： -->
+                <a href="#" class="ui teal basic button">上一页</a>
+              </div>
+              <div class="right aligned column">
+                <a href="#" class="ui teal basic button">下一页</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 侧边栏 -->
+        <div class="five wide column">
+          <!-- 分类 -->
+          <div class="ui segments">
+            <!-- secondary： -->
+            <!-- 头部 -->
+            <div class="ui secondary segment">
+              <div class="ui two column grid">
+                <div class="column">
+                  <i class="idea icon"></i> 分类
+                </div>
+                <div class="right aligned column">
+                  <a href="#" target="_blank">more <i class="angle double right icon"></i></a>
+                </div>
+              </div>
+            </div>
+            <!-- 内容 -->
+            <div class="ui teal segment">
+              <div class="ui fluid vertical menu">
+                <a href="#" class="item">
+                                    中间件
+                                    <div class="ui teal basic label">34</div>
+                                </a>
+                <a href="#" class="item">
+                                    Java
+                                    <div class="ui teal basic label">28</div>
+                                </a>
+                <a href="#" class="item">
+                                    C++
+                                    <div class="ui teal basic label">27</div>
+                                </a>
+                <a href="#" class="item">
+                                    Golang
+                                    <div class="ui teal basic label">23</div>
+                                </a>
+                <a href="#" class="item">
+                                    计算机基础
+                                    <div class="ui teal basic label">7</div>
+                                </a>
+                <a href="#" class="item">
+                                    AI
+                                    <div class="ui teal basic label">7</div>
+                                </a>
+              </div>
+            </div>
+          </div>
+          <!-- 标签 -->
+          <div class="ui segments">
+            <!-- 头部 -->
+            <div class="ui secondary segment">
+              <div class="ui two column grid">
+                <div class="column">
+                  <i class="tags icon"></i> 标签
+                </div>
+                <div class="right aligned column">
+                  <a href="#" target="_blank">more <i class="angle double right icon"></i></a>
+                </div>
+              </div>
+            </div>
+            <!-- 内容 -->
+            <div class="ui teal segment">
+              <a href="#" target="_blank" class="ui teal basic label m-margin-tb-tiny">
+                                ACM
+                                <div class="detail">39</div>
+                            </a>
+              <a href="#" target="_blank" class="ui teal basic label m-margin-tb-tiny">
+                                算法
+                                <div class="detail">39</div>
+                            </a>
+              <a href="#" target="_blank" class="ui teal basic label m-margin-tb-tiny">
+                                Java
+                                <div class="detail">28</div>
+                            </a>
+              <a href="#" target="_blank" class="ui teal basic label m-margin-tb-tiny">
+                                C++
+                                <div class="detail">27</div>
+                            </a>
+              <a href="#" target="_blank" class="ui teal basic label m-margin-tb-tiny">
+                                Golang
+                                <div class="detail">23</div>
+                            </a>
+              <a href="#" target="_blank" class="ui teal basic label m-margin-tb-tiny">
+                                Redis
+                                <div class="detail">16</div>
+                            </a>
+              <a href="#" target="_blank" class="ui teal basic label m-margin-tb-tiny">
+                                RabbitMQ
+                                <div class="detail">15</div>
+                            </a>
+              <a href="#" target="_blank" class="ui teal basic label m-margin-tb-tiny">
+                                Deep Learing
+                                <div class="detail">4</div>
+                            </a>
+              <a href="#" target="_blank" class="ui teal basic label m-margin-tb-tiny">
+                                Machine Learning
+                                <div class="detail">3</div>
+                            </a>
+              <a href="#" target="_blank" class="ui teal basic label m-margin-tb-tiny">
+                                Docker
+                                <div class="detail">3</div>
+                            </a>
+            </div>
+          </div>
+          <!-- 推荐博文 -->
+          <div class="ui segments">
+            <!-- 头部 -->
+            <div class="ui secondary segment m-black">
+              <i class="bookmark icon"></i> 推荐博文
+            </div>
+            <!-- 内容 -->
+            <div class="ui segment">
+              <a href="#" target="_blank" class="m-black m-text-thin">什么是 Semantic UI</a>
+            </div>
+            <div class="ui segment">
+              <a href="#" target="_blank" class="m-black m-text-thin">初识深度学习(Deep Learning)</a>
+            </div>
+            <div class="ui segment">
+              <a href="#" target="_blank" class="m-black m-text-thin">Spring AOP</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 底部 footer -->
+  <!-- vertical：去圆角 -->
+  <footer class="ui inverted vertical segment m-padded-tb-massive">
+    <!-- 
+            center:居中
+            aligned:对齐
+         -->
+    <div class="ui center aligned container">
+      <!-- 
+                divided：分割
+                grid：分成 16 份（列）
+             -->
+      <div class="ui inverted divided grid">
+        <!-- 
+                    three：三份
+                    wide：填充满
+                    column：一列
+                 -->
+        <div class="three wide column">
+          <div class="ui inverted link list">
+            <div class="item">
+              <!-- 
+                                rounded：圆角
+                                image：图片
+                            -->
+              <img src="./static/image/wechat.jpg" class="ui rounded image" alt="" style="width: 110px">
+            </div>
+          </div>
+        </div>
+        <div class="three wide column">
+          <h4 class="ui inverted header m-text-spaced m-text-lined m-opacity-mini"><i class="tasks icon"></i>项目</h4>
+          <!-- list：列表 -->
+          <div class="ui inverted link list">
+            <a href="#" class="item">硅谷书城</a>
+            <a href="#" class="item">谷粒商城</a>
+            <a href="#" class="item">实时数仓</a>
+          </div>
+        </div>
+        <div class="three wide column">
+          <h4 class="ui inverted header m-text-spaced m-text-lined m-opacity-mini"><i class="phone icon"></i>联系我</h4>
+          <div class="ui inverted link list">
+            <a href="tencent://message/?uin=2273195238&Site=&Menu=yes" class="item">QQ</a>
+            <a href="#" class="item">微信</a>
+            <a href="#" class="item">邮箱</a>
+          </div>
+        </div>
+        <div class="seven wide column">
+          <h4 class="ui inverted header m-text-spaced m-text-lined m-opacity-mini"><i class="address card icon"></i>昭崖</h4>
+          <p class="m-text-thin m-text-spaced m-text-lined m-opacity-mini">一名菜鸡ACMer</p>
+        </div>
+      </div>
+      <!-- 
+                section：
+                divider：分割线
+             -->
+      <div class="ui inverted section divider"></div>
+      <p class="m-text-thin m-text-spaced m-text-lined m-opacity-mini">
+        <span>Copyright</span>
+        <span>©</span>
+        <span>2021 - 2023</span>
+        <a href="http://www.acqyd.top" style="color:rgba(255,255,255,.9)">Acqyd</a>
+        <span>Designed By Zhaoya</span>
+      </p>
+      <a href="http://beian.miit.gov.cn/" target="_blank" style="color:rgba(255,255,255,.9)" class="m-opacity-mini">湘ICP备2021018023号</a>
+    </div>
+  </footer>
+  <!-- 引入 jQuery -->
+  <script src="./static/lib/jQuery/jquery-1.7.2.min.js"></script>
+  <!-- 引入 Semantic UI 框架 -->
+  <script src="./static/lib/Semantic-UI-CSS-master/Semantic-UI-CSS-master/semantic.min.js"></script>
 </body>
 
 </html>
